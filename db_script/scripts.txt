@@ -1,0 +1,19 @@
+CREATE DATABASE "UserRegistration"
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United States.1252'
+    LC_CTYPE = 'English_United States.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+
+
+CREATE TABLE public.user_tbl
+(
+    id serial NOT NULL,
+    name character varying(50) NOT NULL,
+    email character varying(25) NOT NULL,
+    password character varying(15),
+    CONSTRAINT user_tbl_pkey PRIMARY KEY (id)
+)

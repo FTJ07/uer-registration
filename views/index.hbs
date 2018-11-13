@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- Custom CSS -->
+        <link href="../css/registration.css" type='text/css' rel="stylesheet"/>
+    </head>
+
+
+<body>
+
+<div class="container">
+    <div class="row">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="/"><a href="#">Registration</a></li>
+                    <li><a href="/view">View</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="col-lg-12 col-md-12 col-sm-12">
+                <form action="/register" method="POST" enctype="application/x-www-form-urlencoded"> 
+                    <div class="container">
+                      <h1>Sign Up</h1>
+                      <p>Please fill in this form to create an account.</p>
+                      <hr>
+
+
+                        {{#if message}}
+                        <div class="alert alert-info">
+                            <strong>{{message}}</strong>
+                        </div>
+                        {{/if}}
+
+                    <div>
+                        <label for="name"><b>Full Name</b></label>
+                        <input class="col-lg-12" type="text" placeholder="Enter Name" name="name" required>
+                    
+                    </div>
+
+                    <div>
+                        
+                      <label for="email"><b>Email</b></label>
+                      <input class="col-lg-12" type="text" placeholder="Enter Email" name="email" required>
+                
+                    </div>    
+
+                    <div>
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                    </div>
+
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                    </div>
+
+                    </div>
+                  </form>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
